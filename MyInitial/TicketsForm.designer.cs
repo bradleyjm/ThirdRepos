@@ -38,6 +38,7 @@
             this.radBox = new System.Windows.Forms.RadioButton();
             this.grpSection = new System.Windows.Forms.GroupBox();
             this.cmdCalculate = new System.Windows.Forms.Button();
+            this.radStall = new System.Windows.Forms.RadioButton();
             this.grpSection.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,9 +116,11 @@
             this.radBox.TabIndex = 8;
             this.radBox.Text = "Box Seats";
             this.radBox.UseVisualStyleBackColor = true;
+            this.radBox.CheckedChanged += new System.EventHandler(this.radBox_CheckedChanged);
             // 
             // grpSection
             // 
+            this.grpSection.Controls.Add(this.radStall);
             this.grpSection.Controls.Add(this.radBox);
             this.grpSection.Controls.Add(this.radGeneral);
             this.grpSection.Controls.Add(this.radBalcony);
@@ -137,6 +140,16 @@
             this.cmdCalculate.Text = "Calculate";
             this.cmdCalculate.UseVisualStyleBackColor = true;
             this.cmdCalculate.Click += new System.EventHandler(this.cmdCalculate_Click);
+            // 
+            // radStall
+            // 
+            this.radStall.AutoSize = true;
+            this.radStall.Location = new System.Drawing.Point(26, 86);
+            this.radStall.Name = "radStall";
+            this.radStall.Size = new System.Drawing.Size(73, 17);
+            this.radStall.TabIndex = 9;
+            this.radStall.Text = "Back Stall";
+            this.radStall.UseVisualStyleBackColor = true;
             // 
             // TicketsForm
             // 
@@ -172,6 +185,7 @@
         private System.Windows.Forms.RadioButton radBox;
         private System.Windows.Forms.GroupBox grpSection;
         private System.Windows.Forms.Button cmdCalculate;
+        private System.Windows.Forms.RadioButton radStall;
     }
 }
 
